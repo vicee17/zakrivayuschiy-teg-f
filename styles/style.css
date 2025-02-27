@@ -122,7 +122,7 @@
     1px -1px 0 white, 
     -1px 1px 0 white, 
     1px 1px 0 white; 
-  filter: brightness(0.5) ;
+  filter: brightness(0.5);
 }
 
 @supports (text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff) {
@@ -196,7 +196,6 @@
   grid-template-rows: 1fr 1fr;
   grid-template-columns: min-content 1fr;
   gap: 20px;
-  overflow: hidden;
 }
 
 .dialog::backdrop {
@@ -307,20 +306,20 @@
 }
 
 .like-icon:active .core {
-  fill: red;
+  fill: #FF0000;
 }
 
 .like-icon:active .main-body {
-  fill: red;
+  fill: #FF0000;
 }
 
 .like-icon.is-liked .core {
-  fill: red;
+  fill: #FF0000;
 }
 
 .like-icon.is-liked .main-body {
   transition-delay: 0.1s;
-  fill: red;
+  fill: #FF0000;
 }
 
 .like-icon .contour {
@@ -328,30 +327,12 @@
 }
 
 .like-icon.is-liked .contour {
-  fill: red;
+  fill: #FF0000;
 }
 
 .like-like:not(.is-liked) .contour {
   transition: fill 0.1s linear;
   fill: #000;
-}
-
-@keyframes likeScale {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.25);
-  }
-}
-
-@keyframes likeSparks {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .like-icon .heart {
@@ -378,8 +359,14 @@
     padding: 0;
     margin: 100px 0;
   }
+  .label {
+    right: 13px;
+  }
   .inline-size {
     inline-size: 100%;
+  }
+  .dialog[open] .OK_button {
+    width: 275px;
   }
   .disket-icon {
     width: 28px;
