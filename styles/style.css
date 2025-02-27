@@ -14,7 +14,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font), sans-serif;
-  font-variation-settings: var(--main-font-weight);
+  font-variation-settings: 'wght' var(--main-font-weight);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,7 +68,7 @@
 .card-title {
   padding: 3px 0 5px 10px;
   line-height: 21px;
-  font-weight: 700;
+  font-variation-settings: 'wght' 700;
   font-size: 18px;
 }
 
@@ -116,7 +116,7 @@
   right: 25px;
   font-family: var(--accent-font);
   font-size: 14px;
-  font-weight: 400;
+  font-weight: var(--main-font-weight);
   text-shadow: 
     -1px -1px 0 white, 
     1px -1px 0 white, 
@@ -138,7 +138,7 @@
   flex-direction: column;
   gap: 27px;
   padding: 25px 25px 0 25px;
-  font-weight: 400;
+  font-variation-settings: 'wgth' 400;
   font-size: 18px;
   line-height: 21px;
 }
@@ -167,7 +167,7 @@
   font-family: var(--accent-font);
   font-size: 14px;
   line-height: 12.6px;
-  font-weight: 400;
+  font-weight: var(--main-font-weight);
 }
 
 .disket-icon {
@@ -190,11 +190,13 @@
 
 .dialog[open] {
   max-width: 353px;
-  max-height: 190px;
+  max-height: 191px;
   padding: 30px;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: min-content 1fr;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -213,7 +215,7 @@
 .dialog[open] .dialog__text {
   font-family: var(--accent-font);
   font-size: 14px;
-  font-weight: 400;
+  font-weight: var(--main-font-weight);
   line-height: 21px;
   grid-row: 1;
   grid-column: 2;
@@ -365,8 +367,13 @@
   .inline-size {
     inline-size: 100%;
   }
+  .dialog[open] {
+    max-width: 341px;
+    padding: 30px 40px;
+  }
   .dialog[open] .OK_button {
-    width: 275px;
+    max-width: 257px;
+    margin-top: 7px;
   }
   .disket-icon {
     width: 28px;
@@ -382,9 +389,6 @@
     width: 306px;
     height: 84px;
     flex-direction: column;
-  }
-  .dialog[open] {
-    max-width: 341px;
   }
 }
 
